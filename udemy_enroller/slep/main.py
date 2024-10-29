@@ -11,7 +11,16 @@ driver = webdriver.Chrome()
 driver.get("https://192.168.1.103:6150/?onepasswdfill=E393059F71954B619ED7E87023B37F10&onepasswdvault=FFDAE69715284BD8AC3CE978276A0485#/signin")
 
 
-sleep(5)
+sleep(2)
+
+login1=driver.find_element(By.XPATH, value='//*[@id="details-button"]')
+login1.click()
+
+sleep(2)
+login2=driver.find_element(By.XPATH, value='//*[@id="proceed-link"]')
+login2.click()
+sleep(10)
+
 
 #Login and hit enter
 email = driver.find_element(By.XPATH, value='//*[@id="dsm-user-fieldset"]/div/div/div[1]/input')
